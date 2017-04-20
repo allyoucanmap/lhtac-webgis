@@ -46,6 +46,7 @@ const {
 
 const {changeMapView} = require('../../MapStore2/web/client/actions/map');
 
+const {changeLayerProperties} = require('../../MapStore2/web/client/actions/layers');
 
 const SpatialFilterSelector = createSelector([
         (state) => (state.queryform),
@@ -103,6 +104,7 @@ const WMSCrossSelector = createSelector([
 const WMSCrossLayerFilter = connect( WMSCrossSelector, (dispatch) => {
     return {
         actions: bindActionCreators({
+            changeLayerProperties,
             onQuery: changeLhtacLayerFilter,
             onReset: resetZones,
             onResetThisZone,

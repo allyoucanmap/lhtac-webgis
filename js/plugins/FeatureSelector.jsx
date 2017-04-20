@@ -39,7 +39,6 @@ const FeatureSelector = React.createClass({
         bboxGlyph: React.PropTypes.string,
         polyGlyph: React.PropTypes.string,
         drawFeatures: React.PropTypes.bool,
-        activeLayer: React.PropTypes.object,
         request: React.PropTypes.object,
         drawMethod: React.PropTypes.string,
         drawStatus: React.PropTypes.string,
@@ -133,7 +132,7 @@ const FeatureSelector = React.createClass({
                     this.props.changeHighlightStatus('disabled');
                 }
                 this.addKey = false;
-            }else {
+            } else {
                 this.addKey = false;
                 this.props.featureSelectorError("Select some features");
             }

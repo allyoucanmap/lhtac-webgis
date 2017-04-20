@@ -21,4 +21,3 @@ const lhtac = createSelector(
 );
 
 module.exports = lhtac;
-

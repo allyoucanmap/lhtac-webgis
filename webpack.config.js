@@ -61,12 +61,12 @@ module.exports = {
     },
     devServer: {
         proxy: [{
-            path: new RegExp("/lhtac-webgis/rest/geostore/(.*)"),
+            path: new RegExp("/mapstore/rest/geostore/(.*)"),
             rewrite: rewriteUrl("/geostore/rest/$1"),
             host: "mapstore.geo-solutions.it",
             target: "http://mapstore.geo-solutions.it"
         }, {
-            path: new RegExp("/lhtac-webgis/proxy(.*)"),
+            path: new RegExp("/mapstore/proxy(.*)"),
             rewrite: rewriteUrl("/lhtac-webgis/proxy$1"),
             host: "lhtac.geo-solutions.it",
             target: "http://lhtac.geo-solutions.it"
